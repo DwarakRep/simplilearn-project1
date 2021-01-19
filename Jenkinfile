@@ -1,4 +1,4 @@
-ipeline {
+pipeline {
   environment {
     registry = "DwarakRep/simplilearn-project1"
     registryCredential = 'dockerhub'
