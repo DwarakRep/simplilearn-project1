@@ -1,0 +1,71 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Verdana;\f1\fnil\fcharset0 Verdana-Bold;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red26\green26\blue26;\red0\green0\blue0;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c13333\c13333\c13333;\csgray\c0\c0;
+\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 This document is an explanation of the project done for simplilearn-devops-\
+certification. It creates a Docker image using Dockerfile and publishes it to docker\
+hub using Jenkins pipeline. The code can be found on the\'a0github.\
+
+\f1\b \ul STEP 1\'a0 Setup local workspace and Github repository.
+\f0\b0 \ulnone \
+-Download and Install VS Code\
+ -Create a Repository \'93simplilearn-project1\'94 in the terminal and\
+- Run \'93git init\'94 to initialize repository.\
+-Create a repository \'93simplilearn-project1 \'93 in the\'a0github.com\
+- Execute the steps to do initial commit, This will add the project in the GitHub\
+master branch.\
+i. git remote add\
+origin\'a0https://github.com/DwarakRepo/simplilearn-project1.git\
+ii. git add\'a0 .\
+iii. git commit \'96m \'93 Initial Commit\'94\
+iv. git push \'96set-upstream origin master\
+
+\f1\b \ul STEP 2\'a0Set up a Jenkin Server and a Docker-machine.
+\f0\b0 \ulnone \
+- Download\'a0Jenkin.war\'a0from\'a0http://mirrors.jenkins.io/war-\
+stable/latest/jenkins.war\
+- Execute this on a terminal of the machine using\
+\'93java -jar D:\\Softwares\\jenkins.war\'a0\'96httpPort=8080\'94\
+-The previous command will run the Jenkin server at localhost:8080 port and it\
+can be accessed in the browser using\'a0http://localhost:8080/\
+-Select \'93Install Selected packages\'94 and wait for installation to finish.\
+-Create a new user after installation is finished.\
+-Install a docker on the same machine where Jenkin is installed\
+
+\f1\b \ul STEP 3-\cf3 \cb4 \expnd0\expndtw0\kerning0
+\ulc3 Create Credentials for Docker Hub
+\f0\b0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \ulnone \
+\pard\pardeftab720\partightenfactor0
+-Navigate to Credentials.\
+-\cf3 \cb5 \expnd0\expndtw0\kerning0
+Click on Global credentials\
+-Click on Add Credentials\
+-Now Create an entry for Docker Hub credentials\
+- Save.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf3 \ul \ulc3 Step 4- Create Jenkins Pipeline\
+
+\f0\b0 \ulnone - New Item, enter name for Pipeline and OK\
+- Navigate to pipeline and define stage and script block.\
+- Your docker user id should be updated.\cf3 \cb1 \
+\cf3 \cb5 - your registry credentials ID from Jenkins from step # 1 should be copied\
+- Use Pipeline Syntax for validation.\
+\
+
+\f1\b \ul Step 5- \cf3 \ulc3 Click on Build - Build the pipeline
+\f0\b0 \cb1 \ulnone \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb5 Once you create the pipeline and changes values per your Docker user id and credentials ID, click on\'a0Build Now.\
+\
+Validate that the Build successfully BUILD Image, UPLOADS and RUNs the DOCKER.\cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf2 \cb1 \kerning1\expnd0\expndtw0 \
+}
